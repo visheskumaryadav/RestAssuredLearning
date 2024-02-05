@@ -1,0 +1,66 @@
+{
+  "valid": [
+    {
+      "first_name": "Gordon",
+      "last_name": "Schumm",
+      "email": "thora71@hotmail.com",
+      "password": "uhwjpicw"
+    },
+    {
+      "first_name": "Kris Mark",
+      "last_name": "Welch",
+      "email": "beryl18@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "first_name": "Jalon",
+      "last_name": "Sauer",
+      "email": "desh_awn28@hotmail.com",
+      "password": "abc15tuprbhbcrbr"
+    },
+    {
+      "first_name": "Diana",
+      "last_name": "Stamm",
+      "email": "ola.stamm60@gmail.com",
+      "password": "fehf@434jbv+$5jc"
+    }
+    ],
+  "invalid": [
+    {
+      "first_name": "Leda",
+      "last_name": "Boyer",
+      "email": "aric_boyer@yahoo.com",
+      "password": ""
+    },
+    {
+      "first_name": "Gaetano",
+      "last_name": "Dickens",
+      "email": "jovani23",
+      "password": "dwcwimvy"
+    },
+    {
+      "first_name": "",
+      "last_name": "Ratke",
+      "email": "lane.ratke@yahoo.com",
+      "password": "wnpjqjoa"
+    },
+    {
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "first_name": "Chesley",
+      "last_name": "Sporer",
+      "email": "augustine50@yahoo.com",
+      "password": null
+    },
+    {
+      "first_name": "Colin",
+      "last_name": "Wunsch",
+      "email": "adonis.wunsch11@yahoo.com",
+      "password": "xlndjmhb"
+    }
+  ]
+}
