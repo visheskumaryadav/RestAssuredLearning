@@ -11,4 +11,13 @@ public class User{
     @JsonProperty("_id")
     private String id;
     private String __v;
+
+    @Override
+    public String toString(){
+
+        String Name= getFirstName()+" "+ getLastName();
+
+        return Name+"\n"+getEmail()+"\n"+getId()+"\n"+get__v()+"\n";
+
+    }
 }

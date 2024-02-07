@@ -1,0 +1,28 @@
+{
+  "valid": {
+    "email": "vikas@yopmail.com",
+    "password": "12345678"
+  },
+  "invalid": [
+    {
+      "email": "kesav@yopmail.com",
+      "password": "12345678"
+    },
+    {
+      "email": "vikas@yopmail.com",
+      "password": ""
+    },
+    {
+      "email": "",
+      "password": "12345678"
+    },
+    {
+      "email": "",
+      "password": ""
+    },
+    {
+      "email": "qeeqe3@yopmail",
+      "password": "asej389473-"
+    }
+  ]
+}

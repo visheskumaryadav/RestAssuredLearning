@@ -1,6 +1,8 @@
 package TestDataGeneration;
 
+import POJOClasses.payload.Login;
 import POJOClasses.resources.Config;
+import POJOClasses.resources.LoggedInUserData;
 import POJOClasses.resources.User;
 import POJOClasses.resources.UserData;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,8 +16,11 @@ import java.util.List;
 public class GenerateTestData {
 
    private static  GenerateTestData generateTestData;
+    @Getter
     private Config configData;
     private UserData userData;
+    @Getter
+    private LoggedInUserData loggedInUser;
     @Getter
     private final List<User> validUserData;
     @Getter
@@ -65,13 +70,15 @@ public class GenerateTestData {
         private void setUpUserDataFileConnection () {
             setUpConfigurationFileConnection();
             if(configData!=null){
-                File userDataFile = new File(System.getProperty("user.dir")+configData.getUserData());
+                File userDataFile = new File(System.getProperty("user.dir")+configData.getUserDataPath());
+                File loggedInUserDataFile=new File(System.getProperty("user.dir")+configData.getLoggedInUserDataPath());
                 try {
-                    if (!userDataFile.exists()) {
-                        throw new FileNotFoundException("User data file is not present......");
+                    if (!userDataFile.exists() || !loggedInUserDataFile.exists()) {
+                        throw new FileNotFoundException("User data file or logged-in user file is not present......");
                     } else {
                         ObjectMapper mapper = new ObjectMapper();
                         userData = mapper.readValue(userDataFile, UserData.class);
+                        loggedInUser=mapper.readValue(loggedInUserDataFile, LoggedInUserData.class);
                     }
                 } catch (FileNotFoundException e) {
                     System.out.println(e.getMessage());
@@ -83,15 +90,10 @@ public class GenerateTestData {
         }
 
 
-
-
-//    public List<User> getValidUserData() {
-//        return validUserData;
-//    }
-//
-//    public List<User> getInValidUserData() {
-//        return inValidUserData;
-//    }
+    public static void main(String[] args) {
+        Login user=GenerateTestData.setUp().getLoggedInUser().getValid();
+        System.out.println(user);
+    }
 }
 
 

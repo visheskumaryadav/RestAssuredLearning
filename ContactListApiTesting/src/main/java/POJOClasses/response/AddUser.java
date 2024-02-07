@@ -8,6 +8,11 @@ import lombok.Data;
 public class AddUser {
     private User user;
     private String token;
+
+    @Override
+    public String toString(){
+        return getUser().toString() + getToken();
+    }
 }
 
 

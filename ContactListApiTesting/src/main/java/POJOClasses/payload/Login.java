@@ -3,7 +3,7 @@ package POJOClasses.payload;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor
+@Data
 public class Login {
     private String email;
     private String password;

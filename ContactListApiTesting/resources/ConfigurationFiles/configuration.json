@@ -1,4 +1,7 @@
 {
   "baseUrl": "https://thinking-tester-contact-list.herokuapp.com/",
-  "userData": "/resources/TestData/UserData.json"
+  "userDataPath": "/resources/TestData/UserData.json",
+  "loggedInUserDataPath": "/resources/TestData/loggedInUserData.json",
+  "firstName": "vikas",
+  "lastName": "kumar"
 }
